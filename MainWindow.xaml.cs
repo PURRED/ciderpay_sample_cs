@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ciderpaysample.Views;
 
 namespace ciderpaysample
 {
@@ -23,6 +24,15 @@ namespace ciderpaysample
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void RequestPaymentBtn_OnClick(object sender, RoutedEventArgs e)
+        {
+            var baseInfo = new CiderBaseInfo(txtMemberID.Text, txtDevID.Text, txtDevToken.Text);
+
+            var win  = new RequestPaymentView(baseInfo);
+
+            win.Show();
         }
     }
 }

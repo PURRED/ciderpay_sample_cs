@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ciderpaysample"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="사이다페이 API 샘플" Height="450" Width="800">
+    <StackPanel Orientation="Vertical" Margin="20,0">
         
-    </Grid>
+        <Label FontSize="20" Margin="0,10">사이다페이 C# 샘플</Label>
+
+        <Label FontSize="12" Margin="0,10">공통 정보</Label>
+
+        <Grid Margin="10, 0, 10, 10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">판매자 아이디</Label>
+            <TextBox Grid.Column="1" Name="txtMemberID" Margin="4"></TextBox>
+
+            <Label Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">개발사 아이디</Label>
+            <TextBox Grid.Column="1" Grid.Row="1" Name="txtDevID" Margin="4"></TextBox>
+
+            <Label Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">개발사 토큰</Label>
+            <TextBox Grid.Column="1" Grid.Row="2" Name="txtDevToken" Margin="4"></TextBox>
+        </Grid>
+
+        <Label FontSize="12" Margin="0,10">API 테스트</Label>
+
+
+        <Button Name="RequestPaymentBtn" Click="RequestPaymentBtn_OnClick">결제 요청</Button>
+
+    </StackPanel>
 </Window>
