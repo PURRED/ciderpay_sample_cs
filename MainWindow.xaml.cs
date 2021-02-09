@@ -34,5 +34,14 @@ namespace ciderpaysample
 
             win.Show();
         }
+
+        private void RequestMpToken_OnClick(object sender, RoutedEventArgs e)
+        {
+            var baseInfo = new CiderBaseInfo(txtMemberID.Text, txtDevID.Text, txtDevToken.Text);
+
+            var win = new MpRequestToken(baseInfo);
+
+            win.Show();
+        }
     }
 }

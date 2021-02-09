@@ -15,5 +15,13 @@ namespace ciderpaysample.API
         /// <param name="requestData"></param>
         /// <returns></returns>
         Task<CpResponsePayment> RequestPayment(CpRequestPayment requestData);
+
+        /// <summary>
+        /// 사이다페이 등록 결제 요청
+        /// </summary>
+        /// <param name="devInfo">개발사 정보</param>
+        /// <param name="requestData">요청 데이터</param>
+        /// <returns></returns>
+        Task<OApiCommonResult> RequestMpToken (CpDevInfo devInfo, CpRequestMpToken requestData);
     }
 }

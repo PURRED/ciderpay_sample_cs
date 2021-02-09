@@ -36,7 +36,9 @@
         <Label FontSize="12" Margin="0,10">API 테스트</Label>
 
 
-        <Button Name="RequestPaymentBtn" Click="RequestPaymentBtn_OnClick">결제 요청</Button>
+        <Button Name="RequestPaymentBtn" Click="RequestPaymentBtn_OnClick" Margin="5">결제 요청</Button>
+
+        <Button Name="RequestMpToken" Margin="5" Click="RequestMpToken_OnClick">등록 결제 토큰 요청</Button>
 
     </StackPanel>
 </Window>
